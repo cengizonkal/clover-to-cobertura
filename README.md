@@ -1,6 +1,6 @@
 # clover-to-cobertura
 Clover XML to Cobertura XML for Gitlab Coverage Visualization
-Forked from [https://github.com/ngyuki/clover-to-cobertura](ngyuki/clover-to-cobertura)
+Forked from https://github.com/ngyuki/clover-to-cobertura/tree/master
 
 ## Install
 
