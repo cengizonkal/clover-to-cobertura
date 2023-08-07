@@ -5,13 +5,13 @@ Forked from https://github.com/ngyuki/clover-to-cobertura/tree/master
 ## Install
 
 ```sh
-composer require --dev conkal/clover-to-cobertura
+composer require --dev ngyuki/clover-to-cobertura
 ```
 
 ## Usage
 
 ```sh
-php clover-to-cobertura.php < clover.xml > cobertura.xml
+php clover-to-cobertura < clover.xml > cobertura.xml
 ```
 
 ## Example for Gitlab CI
