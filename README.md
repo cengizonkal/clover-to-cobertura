@@ -1,18 +1,11 @@
 # clover-to-cobertura
-
 Clover XML to Cobertura XML for Gitlab Coverage Visualization
+Forked from [https://github.com/ngyuki/clover-to-cobertura](ngyuki/clover-to-cobertura)
 
 ## Install
 
 ```sh
-curl https://raw.githubusercontent.com/ngyuki/clover-to-cobertura/master/clover-to-cobertura.php \
-  -o clover-to-cobertura.php
-```
-
-Or
-
-```sh
-composer require --dev ngyuki/clover-to-cobertura
+composer require --dev conkal/clover-to-cobertura
 ```
 
 ## Usage
@@ -37,15 +30,8 @@ test:
     - merge_requests
   script:
     - composer install --no-progress --ansi
-    - phpdbg -qrr vendor/bin/phpunit --coverage-clover=clover.xml
-    - test -e clover-to-cobertura.php ||
-        curl https://raw.githubusercontent.com/ngyuki/clover-to-cobertura/master/clover-to-cobertura.php
-            -o clover-to-cobertura.php
-    - php clover-to-cobertura.php < clover.xml > cobertura.xml
-  cache:
-    paths:
-      - vendor/
-      - clover-to-cobertura.php
+    - ./vendor/bin/phpunit --coverage-clover=coverage.clover.xml
+    - ./vendor/bin/clover-to-cobertura < coverage.clover.xml > cobertura.xml
   artifacts:
     reports:
       cobertura: cobertura.xml

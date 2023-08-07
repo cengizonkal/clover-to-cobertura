@@ -1,15 +1,16 @@
 {
-    "name": "ngyuki/clover-to-cobertura",
+    "name": "conkal/clover-to-cobertura",
     "description": "Clover XML to Cobertura XML for Gitlab Coverage Visualization",
-    "homepage": "https://github.com/ngyuki/clover-to-cobertura",
+    "homepage": "https://github.com/conkal/clover-to-cobertura",
     "license": "MIT",
     "authors": [
-        { "name": "Toshiyuki Goto", "email": "ngyuki.jp@gmail.com" }
+        { "name": "Cengiz Önkal", "email": "onkal.cengiz@gmail.com" }
     ],
     "require": {
         "ext-dom": "*",
         "ext-simplexml": "*",
-        "php": "^7.0|^8.0"
+        "php": ">=5.5.9",
+        "ext-ctype": "*"
     },
     "bin": [
         "clover-to-cobertura"
